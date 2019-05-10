@@ -210,7 +210,7 @@ class PySWMM(object):
         """
         saves a hostart file
         """
-        self.SWMMlibobj.save_hotstart(hs_file)
+        self.SWMMlibobj.save_hotstart(ctypes.c_char_p(six.b(hs_file)))
 
 
     def swmm_run(self, inpfile=None, rptfile=None, binfile=None):
